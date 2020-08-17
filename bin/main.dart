@@ -1,7 +1,9 @@
-
 import 'dart:convert';
+import 'package:practica/animal.dart';
 import 'package:practica/heroe.dart';
 import 'package:practica/antiheroe.dart';
+import 'package:practica/cuadrado.dart';
+import 'package:practica/zoo.dart';
 
 void main() {
 
@@ -102,6 +104,27 @@ void main() {
   final harley = new Antiheroe.fromJson(parsedJson);
   print(harley.nombre);
   print(harley.poder);
+
+  // Getters y Setters
+  final cuadrado = new Cuadrado();
+  cuadrado.lado = 10;
+  print(cuadrado);
+  print('Área: ${ cuadrado.area }');
+
+  // Clases abstractas
+  final perro = new Perro();
+  perro.emitirSonido();
+
+  // Extends
+  final luthor = new Villano();
+  luthor.nombre = 'Solomon Grondy';
+
+  // Mixins
+  final pato = new Pato();
+  pato.volar();
+
+  final pezVolador = new PezVolaror();
+  pezVolador.nadar();
 
 }
 
